@@ -1,9 +1,15 @@
 dproxy DNS proxy server
 ===
-dproxy DNS proxy server like [dnsmasq](http://www.thekelleys.org.uk/dnsmasq/doc.html) writing in GO
+dproxy DNS 代理服务器 [dnsmasq](http://www.thekelleys.org.uk/dnsmasq/doc.html) writing in GO
 
-# Features:
-> * read /etc/hosts as DNS A records.
-> * use memcache/redis as DNS records backend.
-> * add admin api for manage records.
-> * DNS records for Lan/Internet with different result.
+# 功能:
+> * 使用redis存储name记录
+> * 区别内外网
+> * 没有的记录通过其他代理返回结果并缓存
+> * 增加DNS记录管理功能
+
+# TODO:
+> - [ ] Implement DNS server
+> - [ ] Implement config system
+> - [ ] Records backend store
+> - [ ] Implement bind two interface for different dns records result
